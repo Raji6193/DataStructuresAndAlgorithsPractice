@@ -7,10 +7,14 @@ package DataStructuresAndAlgorithmsPractice;
 
 2. Test data set
         Minimum  3 data set including positive, negative and edge
+        * Input: nums = [1,3,4,2,2]
+        * Output: 2
 
-        * hello world -> dlrow olleh
-        * how are you -> uoy era woh
-        * Hi -> iH
+        * Input: nums = [3,1,3,4,2]
+        * Output: 3
+
+        * Input: nums = [3,3,3,3,3]
+        * Output: 3
 
 3. Do I know to solve it?
         Yes- great is there an alternate ?
@@ -24,24 +28,34 @@ Simple technique brute force
         Approach 1:- start with the worst-> improve (optimize) ->  End up with the best
         Approach 2: Write down the options and benefits and code the best
 8. Start always with the Pseudo code (explain the pseudo code to the interviewer with some test data)
-    * Initialize a String variable to store the reversed string
-    * loop from the last character of the string to the size of the String
-    * Append with the resulted string
-    * return the string
+    * Initialize a integer variable to store the duplicate number from the array
+    * Loop through the size of the array
+    * Create a inner loop which starts from the i+1 to the size of the array
+    * Compare i and j
+    * if both are different continue else store in the integer variable and break the loop
+    * return the integer variable
 9. Test against different test data
 10. If it fails then debug to solve it
 11. Optimize the code and remove unnecessary code
 * */
 
-public class reverseString {
+public class findDuplicateFromArray {
 
-    public static char[] reverseAString (char[] targetString) {
-        char[] reversedString = new char[targetString.length];
-        int j=0;
-        for(int i=targetString.length-1; i>=0; i--) {
-            reversedString[j] = targetString[i];
-            j++;
+    public static int findDuplicate(int[] nums) {
+        int slow = nums[0];
+        int fast = nums[0];
+
+        do {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        } while(slow != fast);
+
+        slow = nums[0];
+        while(slow != fast) {
+            slow = nums[slow];
+            fast = nums[fast];
         }
-        return reversedString;
+
+        return slow;
     }
 }
