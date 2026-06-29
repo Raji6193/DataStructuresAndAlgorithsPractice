@@ -2,8 +2,6 @@ package DataStructuresAndAlgorithmsPractice;
 
 import org.junit.Test;
 
-import java.sql.SQLOutput;
-
 import static DataStructuresAndAlgorithmsPractice.findDuplicateFromArray.findDuplicate;
 import static DataStructuresAndAlgorithmsPractice.reverseInteger.reversedInteger;
 import static DataStructuresAndAlgorithmsPractice.reverseString.reverseAString;
