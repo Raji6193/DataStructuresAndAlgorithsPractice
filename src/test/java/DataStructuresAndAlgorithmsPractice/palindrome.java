@@ -3,15 +3,15 @@ package DataStructuresAndAlgorithmsPractice;
 public class palindrome {
 
     public static boolean isPalindrome(int x) {
-        if(x<0)
+        if (x < 0)
             return false;
 
         int original = x;
         int reversed = 0;
-        while (x!= 0) {
-            int digit = x%10;
-            x/=10;
-            reversed = reversed*10 + digit;
+        while (x != 0) {
+            int digit = x % 10;
+            x /= 10;
+            reversed = reversed * 10 + digit;
         }
 
         if (original == reversed)

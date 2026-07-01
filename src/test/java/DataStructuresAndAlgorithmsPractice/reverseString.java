@@ -35,10 +35,10 @@ Simple technique brute force
 
 public class reverseString {
 
-    public static char[] reverseAString (char[] targetString) {
+    public static char[] reverseAString(char[] targetString) {
         char[] reversedString = new char[targetString.length];
-        int j=0;
-        for(int i=targetString.length-1; i>=0; i--) {
+        int j = 0;
+        for (int i = targetString.length - 1; i >= 0; i--) {
             reversedString[j] = targetString[i];
             j++;
         }
