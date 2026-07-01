@@ -33,13 +33,13 @@ public class dsaPractice {
     
     @Test
     public void plusOneTest() {
-        int[] digits = {9,9,9};
+        int[] digits = {9,0,9};
         System.out.println(Arrays.toString(plusOneArray(digits)));        
     }
     
     @Test
     public void testMajorityElement() {
-        int[] nums = {2,2,1,1,1,2,2, 3,3,3,3,3,3,3,3,3,3,3};
+        int[] nums = {8,8,7,7,7};
         System.out.println(majorityElementFromArray.majorityElement(nums));
     }
     
@@ -49,5 +49,11 @@ public class dsaPractice {
         int val = 3;
         System.out.println(removeGivenValueFromArray.countOfVal(nums, val));
         System.out.println(Arrays.toString(removeGivenValueFromArray.sortedArrayWithoutVal(nums, val)));
+    }
+
+    @Test
+    public void testPalindrome() {
+        int num = 1000000001;
+        System.out.println(palindrome.isPalindrome(num));
     }
 }
