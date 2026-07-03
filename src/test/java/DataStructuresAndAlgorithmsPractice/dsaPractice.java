@@ -61,4 +61,16 @@ public class dsaPractice {
         int[] nums = {2, 2, 1};
         System.out.println(singleNumber.findSingleNumber(nums));
     }
+
+    @Test
+    public void testMissingnumber() {
+        int[] nums = {9,6,4,2,3,5,7,0,1};
+        System.out.println(missingNumbersFromaDistintRange.missingnumber(nums));
+    }
+
+    @Test
+    public void testRemoveDuplicates() {
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        System.out.println(removeDuplicatesFromSortedArray.removeDuplicates(nums));
+    }
 }
