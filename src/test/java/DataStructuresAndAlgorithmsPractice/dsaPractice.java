@@ -1,6 +1,8 @@
 package DataStructuresAndAlgorithmsPractice;
+
 import DataStructuresAndAlgorithmsPractice.SlidingWindow.LengthOfLongestSubStringWithoutDuplicates;
 import DataStructuresAndAlgorithmsPractice.SlidingWindow.MinSumSubArrayWithTargetWithoutK;
+import DataStructuresAndAlgorithmsPractice.SlidingWindow.SubarrayProductLessThanK;
 import DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm.*;
 import org.junit.Test;
 
@@ -68,13 +70,13 @@ public class dsaPractice {
 
     @Test
     public void testMissingnumber() {
-        int[] nums = {9,6,4,2,3,5,7,0,1};
+        int[] nums = {9, 6, 4, 2, 3, 5, 7, 0, 1};
         System.out.println(missingNumbersFromaDistintRange.missingnumber(nums));
     }
 
     @Test
     public void testRemoveDuplicates() {
-        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         System.out.println(removeDuplicatesFromSortedArray.removeDuplicates(nums));
     }
 
@@ -112,30 +114,45 @@ public class dsaPractice {
         System.out.println(TrappingRainWaterWithTwoPointers.trapWithTwoPointers(height));
 //        Assertions.assertEquals(6, TrappingRainWater.trapRainWater(height));
     }
-    
+
     @Test
     public void testSlidingWindowMaxSum() {
-        int[] nums = {2,1,5,3,4,6,2,8,9,1,2,3};
-        int k=3;
+        int[] nums = {2, 1, 5, 3, 4, 6, 2, 8, 9, 1, 2, 3};
+        int k = 3;
         System.out.println(MaxSumSubArrayOfSizeK.maxSumOfSubArray(nums, k));
     }
-    
+
     @Test
     public void testMinSizeSubArraySum() {
-        int[] nums = {2,3,1,2,4,3};
-        int target=7;
+        int[] nums = {2, 3, 1, 2, 4, 3};
+        int target = 7;
         System.out.println(MinSumSubArrayWithTargetWithoutK.minSumSubArrayWithTargetWithoutK(nums, target));
     }
-    
+
     @Test
     public void testMaxSizeSubStringWhithoutDuplicates() {
         String s = "abba";
         System.out.println(LengthOfLongestSubStringWithoutDuplicates.lengthOfLongestSubStringWithoutDuplicates(s));
     }
-    
+
     @Test
     public void testMoveZerosToEndArrayInplace() {
-        int[] nums = {0, 1, 0, 3, 12};
+//        int[] nums = {0, 1, 0, 3, 12};
+        int[] nums = {1};
         System.out.println(Arrays.toString(MoveZerosToEndOfArrayInplace.moveZerosToEndOfArrayInplace(nums)));
+    }
+
+    @Test
+    public void testIntersectionOfTwoArrays() {
+        int[] nums1 = {4,9,5};
+        int[] nums2 = {9,4,9,8,4};
+        System.out.println(Arrays.toString(IntersectionOfTwoArray.intersectionOfTwoArray(nums1, nums2)));
+    }
+
+    @Test
+    public void testSubArrayProductLessThanK() {
+        int[] nums = {10,5,2,6};
+        int k =100;
+        System.out.println(SubarrayProductLessThanK.subArrayProsuctLessThanK(nums, k));
     }
 }
