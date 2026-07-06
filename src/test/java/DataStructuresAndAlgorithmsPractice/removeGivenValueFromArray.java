@@ -1,7 +1,5 @@
 package DataStructuresAndAlgorithmsPractice;
 
-import java.util.Arrays;
-
 public class removeGivenValueFromArray {
     public static int countOfVal(int[] nums, int val) {
         int count = 0;

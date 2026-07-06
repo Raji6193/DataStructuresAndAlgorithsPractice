@@ -1,8 +1,12 @@
 package DataStructuresAndAlgorithmsPractice;
-
+import DataStructuresAndAlgorithmsPractice.SlidingWindow.LengthOfLongestSubStringWithoutDuplicates;
+import DataStructuresAndAlgorithmsPractice.SlidingWindow.MinSumSubArrayWithTargetWithoutK;
+import DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm.*;
 import org.junit.Test;
 
 import java.util.Arrays;
+
+import DataStructuresAndAlgorithmsPractice.SlidingWindow.MaxSumSubArrayOfSizeK;
 
 import static DataStructuresAndAlgorithmsPractice.findDuplicateFromArray.findDuplicate;
 import static DataStructuresAndAlgorithmsPractice.plusOne.plusOneArray;
@@ -72,5 +76,66 @@ public class dsaPractice {
     public void testRemoveDuplicates() {
         int[] nums = {0,0,1,1,1,2,2,3,3,4};
         System.out.println(removeDuplicatesFromSortedArray.removeDuplicates(nums));
+    }
+
+    @Test
+    public void testTwoSum() {
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+        System.out.println(Arrays.toString(TwoSum.sumOfTwoNumber(nums, target)));
+    }
+
+    @Test
+    public void testTrapRainWater() {
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println(TrappingRainWaterBruteForce.trapRainWater(height));
+//        Assertions.assertEquals(6, TrappingRainWater.trapRainWater(height));
+    }
+
+    @Test
+    public void testTrapRainWaterPrefixSum() {
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println(TrappingRainWaterWithPrefixSum.trapRainWater(height));
+//        Assertions.assertEquals(6, TrappingRainWater.trapRainWater(height));
+    }
+
+    @Test
+    public void testTrapRainWaterTwoPointer() {
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println(TrappingRainWaterWithTwoPointers.trapWithTwoPointers(height));
+//        Assertions.assertEquals(6, TrappingRainWater.trapRainWater(height));
+    }
+
+    @Test
+    public void testTrapRainWaterTwoPointer2() {
+        int[] height = {4, 2, 0, 3, 2, 1};
+        System.out.println(TrappingRainWaterWithTwoPointers.trapWithTwoPointers(height));
+//        Assertions.assertEquals(6, TrappingRainWater.trapRainWater(height));
+    }
+    
+    @Test
+    public void testSlidingWindowMaxSum() {
+        int[] nums = {2,1,5,3,4,6,2,8,9,1,2,3};
+        int k=3;
+        System.out.println(MaxSumSubArrayOfSizeK.maxSumOfSubArray(nums, k));
+    }
+    
+    @Test
+    public void testMinSizeSubArraySum() {
+        int[] nums = {2,3,1,2,4,3};
+        int target=7;
+        System.out.println(MinSumSubArrayWithTargetWithoutK.minSumSubArrayWithTargetWithoutK(nums, target));
+    }
+    
+    @Test
+    public void testMaxSizeSubStringWhithoutDuplicates() {
+        String s = "abba";
+        System.out.println(LengthOfLongestSubStringWithoutDuplicates.lengthOfLongestSubStringWithoutDuplicates(s));
+    }
+    
+    @Test
+    public void testMoveZerosToEndArrayInplace() {
+        int[] nums = {0, 1, 0, 3, 12};
+        System.out.println(Arrays.toString(MoveZerosToEndOfArrayInplace.moveZerosToEndOfArrayInplace(nums)));
     }
 }
