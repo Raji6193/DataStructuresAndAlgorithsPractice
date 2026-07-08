@@ -154,18 +154,18 @@ public class dsaPractice {
 
     @Test
     public void testMergeTwoArrayAndSort() {
-        int[] nums1 = {0};
-        int m = 0;
-        int[] nums2 = {1};
-        int n = 1;
+        int[] nums1 = {1,2,3,0,0,0};
+        int m = 3;
+        int[] nums2 = {2,5,6};
+        int n = 3;
         System.out.println(Arrays.toString(MergeTwoArrayAndSortInPlace.mergeTwoArrayAndSortInPlace(nums1, m, nums2, n)));
     }
 
     @Test
     public void testGrumpyBookstoreOwner() {
-        int[] customers = {1, 0, 1, 2, 1, 1, 7, 5};
-        int[] grumpy = {0, 1, 0, 1, 0, 1, 0, 1};
-        int X = 3;
+        int[] customers = {3};
+        int[] grumpy = {1};
+        int X = 1;
         System.out.println(GrumpyBookStoreOwner.maxSatisfied(customers, grumpy, X));
     }
 }

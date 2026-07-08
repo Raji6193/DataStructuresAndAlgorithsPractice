@@ -17,6 +17,7 @@ public class GrumpyBookStoreOwner {
         }
         
         int maxExtra = 0;
+        maxExtra = Math.max(maxExtra, extra);
         for (int i = minutes; i < customers.length; i++) {
             if (grumpy[i - minutes] == 1) {
                 extra = extra - customers[i - minutes];
@@ -26,7 +27,6 @@ public class GrumpyBookStoreOwner {
             }
             maxExtra = Math.max(maxExtra, extra);
         }
-        
 
         return totalSatisfied + maxExtra;
     }
