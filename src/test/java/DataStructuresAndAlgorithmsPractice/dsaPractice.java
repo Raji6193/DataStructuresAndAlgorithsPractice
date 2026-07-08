@@ -1,14 +1,10 @@
 package DataStructuresAndAlgorithmsPractice;
 
-import DataStructuresAndAlgorithmsPractice.SlidingWindow.LengthOfLongestSubStringWithoutDuplicates;
-import DataStructuresAndAlgorithmsPractice.SlidingWindow.MinSumSubArrayWithTargetWithoutK;
-import DataStructuresAndAlgorithmsPractice.SlidingWindow.SubarrayProductLessThanK;
+import DataStructuresAndAlgorithmsPractice.SlidingWindow.*;
 import DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm.*;
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import DataStructuresAndAlgorithmsPractice.SlidingWindow.MaxSumSubArrayOfSizeK;
 
 import static DataStructuresAndAlgorithmsPractice.findDuplicateFromArray.findDuplicate;
 import static DataStructuresAndAlgorithmsPractice.plusOne.plusOneArray;
@@ -144,15 +140,32 @@ public class dsaPractice {
 
     @Test
     public void testIntersectionOfTwoArrays() {
-        int[] nums1 = {4,9,5};
-        int[] nums2 = {9,4,9,8,4};
+        int[] nums1 = {4, 9, 5};
+        int[] nums2 = {9, 4, 9, 8, 4};
         System.out.println(Arrays.toString(IntersectionOfTwoArray.intersectionOfTwoArray(nums1, nums2)));
     }
 
     @Test
     public void testSubArrayProductLessThanK() {
-        int[] nums = {10,5,2,6};
-        int k =100;
+        int[] nums = {10, 5, 2, 6};
+        int k = 100;
         System.out.println(SubarrayProductLessThanK.subArrayProsuctLessThanK(nums, k));
+    }
+
+    @Test
+    public void testMergeTwoArrayAndSort() {
+        int[] nums1 = {0};
+        int m = 0;
+        int[] nums2 = {1};
+        int n = 1;
+        System.out.println(Arrays.toString(MergeTwoArrayAndSortInPlace.mergeTwoArrayAndSortInPlace(nums1, m, nums2, n)));
+    }
+
+    @Test
+    public void testGrumpyBookstoreOwner() {
+        int[] customers = {1, 0, 1, 2, 1, 1, 7, 5};
+        int[] grumpy = {0, 1, 0, 1, 0, 1, 0, 1};
+        int X = 3;
+        System.out.println(GrumpyBookStoreOwner.maxSatisfied(customers, grumpy, X));
     }
 }

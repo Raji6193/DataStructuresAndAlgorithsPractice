@@ -7,7 +7,6 @@ public class LengthOfLongestSubStringWithoutDuplicates {
         int maxLength = 0;
 
         while (right < s.length()) {
-
             // Check if s[right] already exists in the current window
             int i = left;
             while (i < right) {
@@ -17,7 +16,6 @@ public class LengthOfLongestSubStringWithoutDuplicates {
                 }
                 i++;
             }
-
             maxLength = Math.max(maxLength, right - left + 1);
             right++;
         }
