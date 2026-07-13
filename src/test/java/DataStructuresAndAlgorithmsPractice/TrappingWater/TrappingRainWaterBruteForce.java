@@ -1,4 +1,4 @@
-package DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm;
+package DataStructuresAndAlgorithmsPractice.TrappingWater;
 /**
  * initialise two variables called leftMaxHeight=Integer.MIN_VALUE, rightMaxHeight=Integer.MIN_VALUE, save=0
  * iterate the array from start index till the end

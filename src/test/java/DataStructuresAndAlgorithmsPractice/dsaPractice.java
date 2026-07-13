@@ -1,6 +1,14 @@
 package DataStructuresAndAlgorithmsPractice;
 
+import DataStructuresAndAlgorithmsPractice.Hashing.CountFrequenciesOfChars;
+import DataStructuresAndAlgorithmsPractice.Hashing.CountFrequenciesOfNumbers;
+import DataStructuresAndAlgorithmsPractice.Hashing.GroupAnagrams;
+import DataStructuresAndAlgorithmsPractice.Hashing.RomanTointeger;
+import DataStructuresAndAlgorithmsPractice.KadanesAlgorithm.MaxSumSubArrayWithNegativeValue;
 import DataStructuresAndAlgorithmsPractice.SlidingWindow.*;
+import DataStructuresAndAlgorithmsPractice.ThreePointer.SortColoursInplace;
+import DataStructuresAndAlgorithmsPractice.TrappingWater.TrappingRainWaterBruteForce;
+import DataStructuresAndAlgorithmsPractice.TrappingWater.TrappingRainWaterWithPrefixSum;
 import DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm.*;
 import org.junit.Test;
 
@@ -133,8 +141,8 @@ public class dsaPractice {
 
     @Test
     public void testMoveZerosToEndArrayInplace() {
-//        int[] nums = {0, 1, 0, 3, 12};
-        int[] nums = {1};
+        int[] nums = {0, 1, 0, 3, 12};
+//        int[] nums = {1};
         System.out.println(Arrays.toString(MoveZerosToEndOfArrayInplace.moveZerosToEndOfArrayInplace(nums)));
     }
 
@@ -154,9 +162,9 @@ public class dsaPractice {
 
     @Test
     public void testMergeTwoArrayAndSort() {
-        int[] nums1 = {1,2,3,0,0,0};
+        int[] nums1 = {1, 2, 3};
         int m = 3;
-        int[] nums2 = {2,5,6};
+        int[] nums2 = {2, 5, 6};
         int n = 3;
         System.out.println(Arrays.toString(MergeTwoArrayAndSortInPlace.mergeTwoArrayAndSortInPlace(nums1, m, nums2, n)));
     }
@@ -167,5 +175,54 @@ public class dsaPractice {
         int[] grumpy = {1};
         int X = 1;
         System.out.println(GrumpyBookStoreOwner.maxSatisfied(customers, grumpy, X));
+    }
+
+    @Test
+    public void testSortColours() {
+        int[] nums = {2, 0, 2, 1, 1, 0};
+        System.out.println(Arrays.toString(SortColoursInplace.sortColors(nums)));
+    }
+
+    @Test
+    public void testMaxSumSubArrayKadanes() {
+        int[] nums = {2, 3, -8, 7, -1, 2, 3};
+        int target = 11;
+        System.out.println(MaxSumSubArrayWithNegativeValue.maxSumSubArray(nums, target));
+    }
+
+    @Test
+    public void testCountFrequenciesOfChars() {
+        String str = "hscfhgfdgdshresgnhf";
+        CountFrequenciesOfChars.countFrequenciesOfChars(str);
+    }
+
+    @Test
+    public void testCountFrequenciesOfNumbers() {
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5};
+        CountFrequenciesOfNumbers.countFrequenciesOfNumbers(nums);
+    }
+
+    @Test
+    public void testRomanToInteger() {
+        String s = "II";
+        System.out.println(RomanTointeger.romanToInt(s));
+    }
+
+    @Test
+    public void testGroupAnagrams() {
+        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        System.out.println(GroupAnagrams.groupAnagrams(strs));
+    }
+
+    @Test
+    public void testRemoveDuplicatesFromSortedArray2() {
+        int[] nums = {0, 0, 1, 1, 1, 1, 2, 3, 3};
+        System.out.println(RemoveDuplicatesFromSortedArrayRetainingOneDuplicate.removeDuplicates(nums));
+    }
+
+    @Test
+    public void testFruitIntoBaskets() {
+        int[] fruits = {1, 2, 3, 2, 2};
+        System.out.println(FruitIntoBasket.totalFruit(fruits));
     }
 }

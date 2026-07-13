@@ -1,4 +1,4 @@
-package DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm;
+package DataStructuresAndAlgorithmsPractice.TrappingWater;
 
 /**
  * Initialise variables save=0;

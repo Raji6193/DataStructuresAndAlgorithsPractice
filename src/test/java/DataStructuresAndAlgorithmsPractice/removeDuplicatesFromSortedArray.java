@@ -1,7 +1,5 @@
 package DataStructuresAndAlgorithmsPractice;
 
-import java.util.Arrays;
-
 public class removeDuplicatesFromSortedArray {
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0)
