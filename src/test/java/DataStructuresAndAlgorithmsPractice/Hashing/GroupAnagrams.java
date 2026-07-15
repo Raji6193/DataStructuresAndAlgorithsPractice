@@ -65,24 +65,26 @@ public class GroupAnagrams {
 
     public static List<Integer> anagramsWithTarget(String s, String p) {
         List<Integer> anagramlist = new ArrayList<>();
-        HashMap<String, Integer> map = new HashMap<>();
-
         int pAscii = returnAsciiValueOfString(p);
         int left = 0;
-
-        while(left < s.length())
-        {
-
+        int right = left + p.length();
+        while (left <= right && right <= s.length()) {
+            String subString = s.substring(left, right);
+            int subStringAscii = returnAsciiValueOfString(subString);
+           if(subStringAscii == pAscii) 
+               anagramlist.add(left);
+            left++;
+            right++;
         }
 
         return anagramlist;
     }
 
     public static int returnAsciiValueOfString(String s) {
-        int[] ascii = new int[26];
         int count = 0;
         for (int i = 0; i < s.length(); i++) {
-            count = count + ascii[s.charAt(i) - 'a'];
+            int a = s.charAt(i) - 'a';
+            count = count + a;
         }
         return count;
     }

@@ -170,8 +170,8 @@ public class dsaPractice {
     public void testGrumpyBookstoreOwner() {
         int[] customers = {3};
         int[] grumpy = {1};
-        int X = 1;
-        System.out.println(GrumpyBookStoreOwner.maxSatisfied(customers, grumpy, X));
+        int minutes = 1;
+        System.out.println(GrumpyBookStoreOwner.maxSatisfied(customers, grumpy, minutes));
     }
 
     @Test
@@ -219,8 +219,8 @@ public class dsaPractice {
 
     @Test
     public void testGroupAnagramsWithTarget() {
-        String s = "cbaebabacd";
-        String p = "abc";
+        String s = "abab";
+        String p = "ab";
         System.out.println(GroupAnagrams.anagramsWithTarget(s, p));
     }
 
