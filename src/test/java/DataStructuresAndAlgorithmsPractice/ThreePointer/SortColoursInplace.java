@@ -6,7 +6,7 @@ public class SortColoursInplace {
         int mid = 0;
         int right = nums.length - 1;
 
-        while (mid < right) {
+        while (mid <= right) {
             int temp = 0;
             if (nums[mid] == 0) {
                 temp = nums[left];

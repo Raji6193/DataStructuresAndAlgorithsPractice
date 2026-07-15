@@ -1,9 +1,6 @@
 package DataStructuresAndAlgorithmsPractice;
 
-import DataStructuresAndAlgorithmsPractice.Hashing.CountFrequenciesOfChars;
-import DataStructuresAndAlgorithmsPractice.Hashing.CountFrequenciesOfNumbers;
-import DataStructuresAndAlgorithmsPractice.Hashing.GroupAnagrams;
-import DataStructuresAndAlgorithmsPractice.Hashing.RomanTointeger;
+import DataStructuresAndAlgorithmsPractice.Hashing.*;
 import DataStructuresAndAlgorithmsPractice.KadanesAlgorithm.MaxSumSubArrayWithNegativeValue;
 import DataStructuresAndAlgorithmsPractice.SlidingWindow.*;
 import DataStructuresAndAlgorithmsPractice.ThreePointer.SortColoursInplace;
@@ -191,6 +188,12 @@ public class dsaPractice {
     }
 
     @Test
+    public void testMaxSumSubArrayKadanesWithOutTarget() {
+        int[] nums = {7, -9};
+        System.out.println(MaxSumSubArrayWithNegativeValue.maxSumSubArrayWithoutTarget(nums));
+    }
+
+    @Test
     public void testCountFrequenciesOfChars() {
         String str = "hscfhgfdgdshresgnhf";
         CountFrequenciesOfChars.countFrequenciesOfChars(str);
@@ -215,6 +218,13 @@ public class dsaPractice {
     }
 
     @Test
+    public void testGroupAnagramsWithTarget() {
+        String s = "cbaebabacd";
+        String p = "abc";
+        System.out.println(GroupAnagrams.anagramsWithTarget(s, p));
+    }
+
+    @Test
     public void testRemoveDuplicatesFromSortedArray2() {
         int[] nums = {0, 0, 1, 1, 1, 1, 2, 3, 3};
         System.out.println(RemoveDuplicatesFromSortedArrayRetainingOneDuplicate.removeDuplicates(nums));
@@ -224,5 +234,11 @@ public class dsaPractice {
     public void testFruitIntoBaskets() {
         int[] fruits = {1, 2, 3, 2, 2};
         System.out.println(FruitIntoBasket.totalFruit(fruits));
+    }
+
+    @Test
+    public void testIsomorphicString() {
+        String s = "paper", t="title";
+        System.out.println(IsomorphicStrings.isIsomorphicString(s,t));
     }
 }

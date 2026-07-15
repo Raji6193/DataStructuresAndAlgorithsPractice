@@ -17,9 +17,9 @@ import java.util.List;
  *      - if no, create a new entry in the map, with key as sorted / ascii version of the string and list of strings
  *  - repeat above steps, till the pointer reaches the
  * return the map.values() as a list
- * 
- * 
- * 
+ *
+ *
+ *
  * TC O(n) // ascii approach; O(n)*O(nlogn) // sorted approach
  * SC O(n)
  * */
@@ -33,10 +33,10 @@ public class GroupAnagrams {
             valueList.add(currentStr);
             //sorted version
 //            String sortedStr = returnSortedVersion(currentStr);
-            
+
             //ascii version
             String sortedStr = returnAsciiVersionOfString(currentStr); // O(26)-O(1)
-            
+
             if (map.containsKey(sortedStr)) {
                 List<String> strings = map.get(sortedStr);
                 strings.addAll(valueList);
@@ -55,11 +55,35 @@ public class GroupAnagrams {
         return String.valueOf(chars);
     }
 
-    public static String returnAsciiVersionOfString(String s){
-        int[] ascii=new int[26];
-        for (int i=0;i<s.length();i++){
-            ascii[s.charAt(i)-'a']++;
+    public static String returnAsciiVersionOfString(String s) {
+        int[] ascii = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            ascii[s.charAt(i) - 'a']++;
         }
         return Arrays.toString(ascii);
+    }
+
+    public static List<Integer> anagramsWithTarget(String s, String p) {
+        List<Integer> anagramlist = new ArrayList<>();
+        HashMap<String, Integer> map = new HashMap<>();
+
+        int pAscii = returnAsciiValueOfString(p);
+        int left = 0;
+
+        while(left < s.length())
+        {
+
+        }
+
+        return anagramlist;
+    }
+
+    public static int returnAsciiValueOfString(String s) {
+        int[] ascii = new int[26];
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            count = count + ascii[s.charAt(i) - 'a'];
+        }
+        return count;
     }
 }
