@@ -241,4 +241,24 @@ public class dsaPractice {
         String s = "paper", t="title";
         System.out.println(IsomorphicStrings.isIsomorphicString(s,t));
     }
+    
+    @Test
+    public void testSubArraySumEqualsK() {
+        int[] nums = {1, 2, 3};
+        int k = 3;
+        System.out.println(SubArraySumEqualsToK.subArraySum(nums, k));
+    }
+    
+    @Test
+    public void testPermutationInString() {
+        String s1 = "ab", s2 = "eidboaooo";
+        System.out.println(PermutationInString.checkPermutationInString(s1, s2));
+    }
+    
+    @Test
+    public void  testRotateArray() {
+        int[] nums = {-1,-100,3,99};
+        int k = 2;
+        System.out.println(Arrays.toString(RotateArrayRightByK.rotate(nums, k)));
+    }
 }
