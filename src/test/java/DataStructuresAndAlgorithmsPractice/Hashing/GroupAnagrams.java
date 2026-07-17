@@ -65,13 +65,13 @@ public class GroupAnagrams {
 
     public static List<Integer> anagramsWithTarget(String s, String p) {
         List<Integer> anagramlist = new ArrayList<>();
-        int pAscii = returnAsciiValueOfString(p);
         int left = 0;
         int right = left + p.length();
+        String pAscii = returnAsciiVersionOfString(p);
         while (left <= right && right <= s.length()) {
             String subString = s.substring(left, right);
-            int subStringAscii = returnAsciiValueOfString(subString);
-           if(subStringAscii == pAscii) 
+            String subStringAscii = returnAsciiVersionOfString(subString);
+           if(subStringAscii.equals(pAscii))
                anagramlist.add(left);
             left++;
             right++;

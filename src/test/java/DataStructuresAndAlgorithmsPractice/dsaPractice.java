@@ -219,8 +219,8 @@ public class dsaPractice {
 
     @Test
     public void testGroupAnagramsWithTarget() {
-        String s = "abab";
-        String p = "ab";
+        String s = "af";
+        String p = "be";
         System.out.println(GroupAnagrams.anagramsWithTarget(s, p));
     }
 
