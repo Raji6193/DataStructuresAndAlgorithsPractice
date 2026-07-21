@@ -4,16 +4,24 @@ import java.util.HashMap;
 
 public class RotateArrayRightByK {
     public static int[] rotate(int[] nums, int k) {
-        int j = 0;
-        int[] nums1 = new int[nums.length];
-        for(int i = nums.length - k; i < nums.length; i++) {
-            nums1[j] = nums[i];
-            j++;
+
+        k = k % nums.length - 1;
+
+        reverse(0, nums.length-1, nums);
+        reverse(0, k - 1, nums);
+        reverse(k, nums.length-1, nums);
+
+        return nums;
+    }
+
+    private static int[] reverse(int left, int right, int[] nums) {
+        while (left < right) {
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
         }
-        for(int i = 0; i < nums.length - k; i++) {
-            nums1[j] = nums[i];
-            j++;
-        }
-        return nums1;
+        return nums;
     }
 }

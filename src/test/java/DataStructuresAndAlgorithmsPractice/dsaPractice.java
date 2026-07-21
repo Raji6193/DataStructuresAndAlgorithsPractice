@@ -1,8 +1,17 @@
 package DataStructuresAndAlgorithmsPractice;
 
+import DataStructuresAndAlgorithmsPractice.BinarySearch.FindIndexofElement;
+import DataStructuresAndAlgorithmsPractice.BinarySearch.FindSingleElementInASortedArrayWithTwoOccuranceOfEachElement;
+import DataStructuresAndAlgorithmsPractice.BinarySearch.FirstAndLastIndexOfElememtInTheSortedArray;
+import DataStructuresAndAlgorithmsPractice.BinarySearch.SquareRoot;
+import DataStructuresAndAlgorithmsPractice.BitManipulation.BitManipulation;
+import DataStructuresAndAlgorithmsPractice.BitManipulation.FindSingleElement;
+import DataStructuresAndAlgorithmsPractice.BitManipulation.NumberOf1Bits;
 import DataStructuresAndAlgorithmsPractice.Hashing.*;
 import DataStructuresAndAlgorithmsPractice.KadanesAlgorithm.MaxSumSubArrayWithNegativeValue;
 import DataStructuresAndAlgorithmsPractice.SlidingWindow.*;
+import DataStructuresAndAlgorithmsPractice.Test.PlusOne;
+import DataStructuresAndAlgorithmsPractice.Test.longestSubstringWithoutRepeatingCharacters;
 import DataStructuresAndAlgorithmsPractice.ThreePointer.SortColoursInplace;
 import DataStructuresAndAlgorithmsPractice.TrappingWater.TrappingRainWaterBruteForce;
 import DataStructuresAndAlgorithmsPractice.TrappingWater.TrappingRainWaterWithPrefixSum;
@@ -67,6 +76,12 @@ public class dsaPractice {
     public void testSingleNumber() {
         int[] nums = {2, 2, 1};
         System.out.println(singleNumber.findSingleNumber(nums));
+    }
+
+    @Test
+    public void testSingleNumberWithBitSet() {
+        int[] nums = {2, 2, 1};
+        System.out.println(FindSingleElement.findSingleElementWithBitManipulation(nums));
     }
 
     @Test
@@ -238,27 +253,79 @@ public class dsaPractice {
 
     @Test
     public void testIsomorphicString() {
-        String s = "paper", t="title";
-        System.out.println(IsomorphicStrings.isIsomorphicString(s,t));
+        String s = "paper", t = "title";
+        System.out.println(IsomorphicStrings.isIsomorphicString(s, t));
     }
-    
+
     @Test
     public void testSubArraySumEqualsK() {
-        int[] nums = {1, 2, 3};
-        int k = 3;
+        int[] nums = {1, -1, 0};
+        int k = 0;
         System.out.println(SubArraySumEqualsToK.subArraySum(nums, k));
     }
-    
+
     @Test
     public void testPermutationInString() {
-        String s1 = "ab", s2 = "eidboaooo";
+        String s1 = "abb", s2 = "ddc";
         System.out.println(PermutationInString.checkPermutationInString(s1, s2));
     }
-    
+
     @Test
-    public void  testRotateArray() {
-        int[] nums = {-1,-100,3,99};
+    public void testRotateArray() {
+        int[] nums = {-1, -100, 3, 99};
         int k = 2;
         System.out.println(Arrays.toString(RotateArrayRightByK.rotate(nums, k)));
+    }
+
+    @Test
+    public void testLongestSubArray() {
+        String s = "abcabcbb";
+        System.out.println(longestSubstringWithoutRepeatingCharacters.longestSubarray(s));
+    }
+
+    @Test
+    public void testPlusOne() {
+        int[] nums = {8, 9, 9};
+        System.out.println(Arrays.toString(PlusOne.plusOne(nums)));
+    }
+
+    @Test
+    public void testFindFirstAndLastIndexOfElementInSortedArray() {
+        int[] nums = {5, 6, 7, 8, 8, 9};
+        int target = 8;
+        System.out.println(Arrays.toString(FirstAndLastIndexOfElememtInTheSortedArray.findFirstAndLastIndex(nums, target)));
+    }
+
+    @Test
+    public void testFindSingleElement() {
+        int[] nums = {1,1,2,3,3,4,4,8,8};
+        System.out.println(FindSingleElementInASortedArrayWithTwoOccuranceOfEachElement.findSingleElement(nums));
+    }
+
+    @Test
+    public void findBitSet() {
+        int n = 5;
+        int k =2;
+        System.out.println(BitManipulation.findBitSet(n,k));
+        System.out.println(BitManipulation.findBitSetRightShift(n,k));
+    }
+
+    @Test
+    public void squareRoot() {
+        int n = 25;
+        System.out.println(SquareRoot.squareRoot(n));
+    }
+
+    @Test
+    public void findElementFromSortedArray() {
+        int[] nums = {-1,0,3,5,9,12};
+        int target = 2;
+        System.out.println(FindIndexofElement.findIndexOfElement(nums,target));
+    }
+
+    @Test
+    public void findNumberOf1Bits(){
+        int num = 2147483645;
+        System.out.println(NumberOf1Bits.findNumberOf1Bits(num));
     }
 }
