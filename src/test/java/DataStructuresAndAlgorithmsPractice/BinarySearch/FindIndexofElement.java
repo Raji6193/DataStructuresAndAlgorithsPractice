@@ -1,7 +1,15 @@
 package DataStructuresAndAlgorithmsPractice.BinarySearch;
 
+import org.junit.Test;
+
 public class FindIndexofElement {
-    public static int findIndexOfElement(int[] nums, int target) {
+    @Test
+    public void findElementFromSortedArray() {
+        int[] nums = {-1,0,3,5,9,12};
+        int target = 2;
+        System.out.println(findIndexOfElement(nums,target));
+    }
+    public int findIndexOfElement(int[] nums, int target) {
 
         int low = 0, high = nums.length-1;
 

@@ -1,7 +1,17 @@
 package DataStructuresAndAlgorithmsPractice.SlidingWindow;
 
+import org.junit.Test;
+
 public class GrumpyBookStoreOwner {
-    public static int maxSatisfied(int[] customers, int[] grumpy, int minutes) {
+    @Test
+    public void testGrumpyBookstoreOwner() {
+        int[] customers = {3};
+        int[] grumpy = {1};
+        int minutes = 1;
+        System.out.println(maxSatisfied(customers, grumpy, minutes));
+    }
+
+    public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {
         int totalSatisfied = 0;
         for (int i = 0; i < customers.length; i++) {
             if (grumpy[i] == 0) {

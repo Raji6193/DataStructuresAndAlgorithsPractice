@@ -37,9 +37,17 @@ Simple technique brute force
 11. Optimize the code and remove unnecessary code
 * */
 
+import org.junit.Test;
+
 public class reverseInteger {
 
-    public static int reversedInteger(int actualInteger) {
+    @Test
+    public void reverseInteger() {
+        int actualNumber = 321;
+        System.out.println(reversedInteger(actualNumber));
+    }
+
+    public int reversedInteger(int actualInteger) {
         int reversedNumber = 0;
 
         while (actualInteger != 0) {

@@ -1,5 +1,7 @@
 package DataStructuresAndAlgorithmsPractice.Hashing;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -25,7 +27,22 @@ import java.util.List;
  * */
 
 public class GroupAnagrams {
-    public static List<List<String>> groupAnagrams(String[] strs) {
+
+    @Test
+    public void testGroupAnagramsWithTarget() {
+        String s = "af";
+        String p = "be";
+        System.out.println(anagramsWithTarget(s, p));
+    }
+
+    @Test
+    public void testGroupAnagrams() {
+        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        System.out.println(groupAnagrams(strs));
+    }
+
+
+    public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> map = new HashMap<>();
         for (int i = 0; i < strs.length; i++) {
             String currentStr = strs[i];
@@ -49,13 +66,13 @@ public class GroupAnagrams {
         return new ArrayList<>(map.values());
     }
 
-    public static String returnSortedVersion(String str) {
+    public String returnSortedVersion(String str) {
         char[] chars = str.toCharArray();
         Arrays.sort(chars);
         return String.valueOf(chars);
     }
 
-    public static String returnAsciiVersionOfString(String s) {
+    public String returnAsciiVersionOfString(String s) {
         int[] ascii = new int[26];
         for (int i = 0; i < s.length(); i++) {
             ascii[s.charAt(i) - 'a']++;
@@ -63,7 +80,7 @@ public class GroupAnagrams {
         return Arrays.toString(ascii);
     }
 
-    public static List<Integer> anagramsWithTarget(String s, String p) {
+    public List<Integer> anagramsWithTarget(String s, String p) {
         List<Integer> anagramlist = new ArrayList<>();
         int left = 0;
         int right = left + p.length();
@@ -80,7 +97,7 @@ public class GroupAnagrams {
         return anagramlist;
     }
 
-    public static int returnAsciiValueOfString(String s) {
+    public int returnAsciiValueOfString(String s) {
         int count = 0;
         for (int i = 0; i < s.length(); i++) {
             int a = s.charAt(i) - 'a';

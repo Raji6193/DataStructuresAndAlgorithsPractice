@@ -1,7 +1,17 @@
 package DataStructuresAndAlgorithmsPractice.SlidingWindow;
 
+import org.junit.Test;
+
 public class SubarrayProductLessThanK {
-    public static int subArrayProsuctLessThanK(int[] nums, int k) {
+
+    @Test
+    public void testSubArrayProductLessThanK() {
+        int[] nums = {10, 5, 2, 6};
+        int k = 100;
+        System.out.println(subArrayProsuctLessThanK(nums, k));
+    }
+
+    public int subArrayProsuctLessThanK(int[] nums, int k) {
         if (k <= 1)
             return 0;
 

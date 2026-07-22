@@ -40,8 +40,18 @@ Simple technique brute force
 * SC = O(n)
 * */
 
+import org.junit.Test;
+
+import java.util.Arrays;
+
 public class PlusOne {
-    public static int[] plusOne(int[] nums) {
+
+    @Test
+    public void testPlusOne() {
+        int[] nums = {8, 9, 9};
+        System.out.println(Arrays.toString(plusOne(nums)));
+    }
+    public int[] plusOne(int[] nums) {
         for (int i = nums.length - 1; i >= 0; i--) {
             if (nums[i] < 9) {
                 nums[i]++;

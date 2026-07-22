@@ -1,9 +1,18 @@
 package DataStructuresAndAlgorithmsPractice.Hashing;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 
 public class RomanTointeger {
-    public static int romanToInt(String s) {
+
+    @Test
+    public void testRomanToInteger() {
+        String s = "II";
+        System.out.println(romanToInt(s));
+    }
+
+    public int romanToInt(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         map.put('I', 1);
         map.put('V', 5);

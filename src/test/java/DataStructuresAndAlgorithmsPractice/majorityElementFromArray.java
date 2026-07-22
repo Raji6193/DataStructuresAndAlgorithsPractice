@@ -1,8 +1,16 @@
 package DataStructuresAndAlgorithmsPractice;
 
+import org.junit.Test;
+
 public class majorityElementFromArray {
 
-    public static int majorityElement(int[] nums) {
+    @Test
+    public void testMajorityElement() {
+        int[] nums = {8, 8, 7, 7, 7};
+        System.out.println(majorityElement(nums));
+    }
+
+    public int majorityElement(int[] nums) {
         int n = nums.length / 2;
         int majorityElement = -1;
         for (int i = 0; i < nums.length; i++) {

@@ -46,8 +46,16 @@ Simple technique brute force
 *
 * */
 
+import org.junit.Test;
+
 public class longestSubstringWithoutRepeatingCharacters {
-    public static int longestSubarray(String s) {
+
+    @Test
+    public void testLongestSubArray() {
+        String s = "abcabcbb";
+        System.out.println(longestSubarray(s));
+    }
+    public int longestSubarray(String s) {
         int left = 0;
         int right = 0;
         int maxLength = 0;

@@ -1,8 +1,16 @@
 package DataStructuresAndAlgorithmsPractice;
 
+import org.junit.Test;
+
 public class palindrome {
 
-    public static boolean isPalindrome(int x) {
+    @Test
+    public void testPalindrome() {
+        int num = 1000000001;
+        System.out.println(isPalindrome(num));
+    }
+
+    public boolean isPalindrome(int x) {
         if (x < 0)
             return false;
 

@@ -1,9 +1,19 @@
 package DataStructuresAndAlgorithmsPractice.Hashing;
 
+import org.junit.Test;
+
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class RotateArrayRightByK {
-    public static int[] rotate(int[] nums, int k) {
+
+    @Test
+    public void testRotateArray() {
+        int[] nums = {-1, -100, 3, 99};
+        int k = 2;
+        System.out.println(Arrays.toString(rotate(nums, k)));
+    }
+    public int[] rotate(int[] nums, int k) {
 
         k = k % nums.length - 1;
 

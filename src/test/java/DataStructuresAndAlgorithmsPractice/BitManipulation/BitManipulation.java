@@ -1,7 +1,16 @@
 package DataStructuresAndAlgorithmsPractice.BitManipulation;
 
+import org.junit.Test;
+
 public class BitManipulation {
-    public static boolean findBitSet(int num, int k) {
+    @Test
+    public void findBitSet() {
+        int n = 5;
+        int k =2;
+        System.out.println(findBitSet(n,k));
+        System.out.println(findBitSetRightShift(n,k));
+    }
+    public boolean findBitSet(int num, int k) {
 
         //Best practicw
         //Formula (n&(1<<k))!=0
@@ -12,7 +21,7 @@ public class BitManipulation {
         else return false;
     }
 
-    public static boolean findBitSetRightShift(int num, int k) {
+    public boolean findBitSetRightShift(int num, int k) {
         int modifiedValue = num >> k;
         int bitSet = (modifiedValue & 1);
         if (bitSet != 0)

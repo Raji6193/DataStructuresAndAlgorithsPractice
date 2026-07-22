@@ -1,5 +1,7 @@
 package DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 
 /**
@@ -19,7 +21,16 @@ import java.util.Arrays;
  */
 
 public class IntersectionOfTwoArray {
-    public static int[] intersectionOfTwoArray(int[] nums1, int[] nums2) {
+
+    @Test
+    public void testIntersectionOfTwoArrays() {
+        int[] nums1 = {4, 9, 5};
+        int[] nums2 = {9, 4, 9, 8, 4};
+        System.out.println(Arrays.toString(intersectionOfTwoArray(nums1, nums2)));
+    }
+
+
+    public int[] intersectionOfTwoArray(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         int[] result = new int[Math.min(nums1.length, nums2.length)];

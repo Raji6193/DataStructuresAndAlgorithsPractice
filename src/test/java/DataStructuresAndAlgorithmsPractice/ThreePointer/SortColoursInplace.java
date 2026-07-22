@@ -1,7 +1,17 @@
 package DataStructuresAndAlgorithmsPractice.ThreePointer;
 
+import org.junit.Test;
+
+import java.util.Arrays;
+
 public class SortColoursInplace {
-    public static int[] sortColors(int[] nums) {
+    @Test
+    public void testSortColours() {
+        int[] nums = {2, 0, 2, 1, 1, 0};
+        System.out.println(Arrays.toString(sortColors(nums)));
+    }
+
+    public int[] sortColors(int[] nums) {
         int left = 0;
         int mid = 0;
         int right = nums.length - 1;

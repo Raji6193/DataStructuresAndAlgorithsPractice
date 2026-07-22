@@ -1,7 +1,20 @@
 package DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm;
 
+import org.junit.Test;
+
+import java.util.Arrays;
+
 public class TwoSum {
-    public static int[] sumOfTwoNumber(int[] nums, int target) {
+
+    @Test
+    public void testTwoSum() {
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+        System.out.println(Arrays.toString(sumOfTwoNumber(nums, target)));
+    }
+
+
+    public int[] sumOfTwoNumber(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
         while (left < right) {

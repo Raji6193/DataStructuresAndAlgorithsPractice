@@ -1,6 +1,14 @@
 package DataStructuresAndAlgorithmsPractice;
 
+import org.junit.Test;
+
 public class reverseStringInplace {
+
+    @Test
+    public void test() {
+        char[] targetCharArray = {'h', 'e', 'l', 'l', 'o'};
+        System.out.println(reverseAStringInplace(targetCharArray));
+    }
 
     public static char[] reverseAStringInplace(char[] s) {
         int left = s.length - 1;

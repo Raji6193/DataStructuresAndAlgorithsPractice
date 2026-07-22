@@ -1,7 +1,24 @@
 package DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm;
 
+import org.junit.Test;
+
 public class TrappingRainWaterWithTwoPointers {
-    public static int trapWithTwoPointers(int[] height) {
+
+    @Test
+    public void testTrapRainWaterTwoPointer2() {
+        int[] height = {4, 2, 0, 3, 2, 1};
+        System.out.println(trapWithTwoPointers(height));
+//        Assertions.assertEquals(6, TrappingRainWater.trapRainWater(height));
+    }
+
+    @Test
+    public void testTrapRainWaterTwoPointer() {
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println(trapWithTwoPointers(height));
+//        Assertions.assertEquals(6, TrappingRainWater.trapRainWater(height));
+    }
+
+    public int trapWithTwoPointers(int[] height) {
         int left = 0;
         int right = height.length - 1;
         int leftMaxHeight = 0;

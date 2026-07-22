@@ -1,7 +1,16 @@
 package DataStructuresAndAlgorithmsPractice.TwoPointerAlgorithm;
 
+import org.junit.Test;
+
 public class RemoveDuplicatesFromSortedArrayRetainingOneDuplicate {
-    public static int removeDuplicates(int[] nums) {
+
+    @Test
+    public void testRemoveDuplicatesFromSortedArray2() {
+        int[] nums = {0, 0, 1, 1, 1, 1, 2, 3, 3};
+        System.out.println(removeDuplicates(nums));
+    }
+
+    public int removeDuplicates(int[] nums) {
         if (nums.length <= 2)
             return nums.length;
         int k = 2;

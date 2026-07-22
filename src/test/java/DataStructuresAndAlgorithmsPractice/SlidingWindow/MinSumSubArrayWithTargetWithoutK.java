@@ -1,7 +1,17 @@
 package DataStructuresAndAlgorithmsPractice.SlidingWindow;
 
+import org.junit.Test;
+
 public class MinSumSubArrayWithTargetWithoutK {
-    public static int minSumSubArrayWithTargetWithoutK(int[] nums, int target) {
+
+    @Test
+    public void testMinSizeSubArraySum() {
+        int[] nums = {2, 3, 1, 2, 4, 3};
+        int target = 7;
+        System.out.println(minSumSubArrayWithTargetWithoutK(nums, target));
+    }
+
+    public int minSumSubArrayWithTargetWithoutK(int[] nums, int target) {
         int left = 0;
         int right = 0;
         int runningSum = 0;

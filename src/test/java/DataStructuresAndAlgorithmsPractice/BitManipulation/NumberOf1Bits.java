@@ -1,7 +1,15 @@
 package DataStructuresAndAlgorithmsPractice.BitManipulation;
 
+import org.junit.Test;
+
 public class NumberOf1Bits {
-    public static int findNumberOf1Bits(int n) {
+
+    @Test
+    public void findNumberOf1Bits(){
+        int num = 2147483645;
+        System.out.println(findNumberOf1Bits(num));
+    }
+    public int findNumberOf1Bits(int n) {
         int count = 0;
         int mask = 1;
         for (int i = 0; i < 32; i++) {

@@ -1,12 +1,23 @@
 package DataStructuresAndAlgorithmsPractice.SlidingWindow;
 
+import org.junit.Test;
+
 /**
  * TC: O(n)
  * SC: O(1)
  * */
 
 public class MaxSumSubArrayOfSizeK {
-    public static int maxSumOfSubArray(int[] nums, int k) {
+
+    @Test
+    public void testSlidingWindowMaxSum() {
+        int[] nums = {2, 1, 5, 3, 4, 6, 2, 8, 9, 1, 2, 3};
+        int k = 3;
+        System.out.println(maxSumOfSubArray(nums, k));
+    }
+
+
+    public int maxSumOfSubArray(int[] nums, int k) {
         int maxSum = 0;
         int windowSum = 0;
         //1 iteration till window size and calculate the sum of first window

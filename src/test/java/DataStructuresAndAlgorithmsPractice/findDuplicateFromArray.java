@@ -39,9 +39,18 @@ Simple technique brute force
 11. Optimize the code and remove unnecessary code
 * */
 
+import org.junit.Test;
+
 public class findDuplicateFromArray {
 
-    public static int findDuplicate(int[] nums) {
+    @Test
+    public void findDuplicates() {
+        int[] nums = {3, 3, 3, 3, 3};
+        System.out.println(findDuplicate(nums));
+    }
+
+
+    public int findDuplicate(int[] nums) {
         int slow = nums[0];
         int fast = nums[0];
 

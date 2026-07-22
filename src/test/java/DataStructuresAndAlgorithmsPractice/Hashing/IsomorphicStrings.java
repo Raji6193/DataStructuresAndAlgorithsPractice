@@ -1,5 +1,7 @@
 package DataStructuresAndAlgorithmsPractice.Hashing;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,7 +50,14 @@ import java.util.Map;
 * */
 
 public class IsomorphicStrings {
-    public static boolean isIsomorphicString(String s, String t) {
+
+    @Test
+    public void testIsomorphicString() {
+        String s = "paper", t = "title";
+        System.out.println(isIsomorphicString(s, t));
+    }
+
+    public boolean isIsomorphicString(String s, String t) {
         Map<Character, Character> map = new HashMap<>();
         Map<Character, Character> map2 = new HashMap<>();
         if (s.length() != t.length())

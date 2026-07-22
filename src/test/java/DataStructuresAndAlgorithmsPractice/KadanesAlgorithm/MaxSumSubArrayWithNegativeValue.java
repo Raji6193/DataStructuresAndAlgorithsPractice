@@ -1,7 +1,23 @@
 package DataStructuresAndAlgorithmsPractice.KadanesAlgorithm;
 
+import org.junit.Test;
+
 public class MaxSumSubArrayWithNegativeValue {
-    public static int maxSumSubArray(int[] nums, int target) {
+
+    @Test
+    public void testMaxSumSubArrayKadanesWithOutTarget() {
+        int[] nums = {7, -9};
+        System.out.println(maxSumSubArrayWithoutTarget(nums));
+    }
+
+    @Test
+    public void testMaxSumSubArrayKadanes() {
+        int[] nums = {2, 3, -8, 7, -1, 2, 3};
+        int target = 11;
+        System.out.println(maxSumSubArray(nums, target));
+    }
+
+    public int maxSumSubArray(int[] nums, int target) {
         int currentSum = 0, maxSum = Integer.MIN_VALUE;
         if(nums.length == 1)
             return nums[0];
@@ -14,7 +30,7 @@ public class MaxSumSubArrayWithNegativeValue {
         return maxSum;
     }
 
-    public static int maxSumSubArrayWithoutTarget(int[] nums) {
+    public int maxSumSubArrayWithoutTarget(int[] nums) {
         int currentSum = 0, maxSum = Integer.MIN_VALUE;
         if(nums.length == 1)
             return nums[0];
@@ -26,6 +42,4 @@ public class MaxSumSubArrayWithNegativeValue {
         }
         return maxSum;
     }
-
-
 }

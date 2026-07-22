@@ -33,9 +33,17 @@ Simple technique brute force
 11. Optimize the code and remove unnecessary code
 * */
 
+import org.junit.Test;
+
 public class reverseString {
 
-    public static char[] reverseAString(char[] targetString) {
+    @Test
+    public void test() {
+        char[] targetCharArray = {'h', 'e', 'l', 'l', 'o'};
+        System.out.println(reverseAString(targetCharArray));
+    }
+
+    public char[] reverseAString(char[] targetString) {
         char[] reversedString = new char[targetString.length];
         int j = 0;
         for (int i = targetString.length - 1; i >= 0; i--) {

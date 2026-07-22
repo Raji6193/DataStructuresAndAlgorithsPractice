@@ -1,4 +1,7 @@
 package DataStructuresAndAlgorithmsPractice.TrappingWater;
+
+import org.junit.Test;
+
 /**
  * initialise two variables called leftMaxHeight=Integer.MIN_VALUE, rightMaxHeight=Integer.MIN_VALUE, save=0
  * iterate the array from start index till the end
@@ -16,7 +19,15 @@ package DataStructuresAndAlgorithmsPractice.TrappingWater;
  *
  */
 public class TrappingRainWaterBruteForce {
-    public static int trapRainWater(int[] height) {
+
+    @Test
+    public void testTrapRainWater() {
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println(trapRainWater(height));
+//        Assertions.assertEquals(6, TrappingRainWater.trapRainWater(height));
+    }
+
+    public int trapRainWater(int[] height) {
         int save = 0;
 
         for (int i = 1; i < height.length-1; i++) { //O(n)

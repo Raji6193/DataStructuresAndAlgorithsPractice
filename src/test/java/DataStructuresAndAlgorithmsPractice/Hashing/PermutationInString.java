@@ -1,9 +1,17 @@
 package DataStructuresAndAlgorithmsPractice.Hashing;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 
 public class PermutationInString {
-    public static boolean checkPermutationInString(String s1, String s2) {
+
+    @Test
+    public void testPermutationInString() {
+        String s1 = "abb", s2 = "ddc";
+        System.out.println(checkPermutationInString(s1, s2));
+    }
+    public boolean checkPermutationInString(String s1, String s2) {
         if (s1.length() > s2.length()) {
             return false;
         }

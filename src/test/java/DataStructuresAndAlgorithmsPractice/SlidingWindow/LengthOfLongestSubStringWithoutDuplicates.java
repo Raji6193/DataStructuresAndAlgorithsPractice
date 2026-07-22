@@ -1,7 +1,16 @@
 package DataStructuresAndAlgorithmsPractice.SlidingWindow;
 
+import org.junit.Test;
+
 public class LengthOfLongestSubStringWithoutDuplicates {
-    public static int lengthOfLongestSubStringWithoutDuplicates(String s) {
+
+    @Test
+    public void testMaxSizeSubStringWhithoutDuplicates() {
+        String s = "abba";
+        System.out.println(lengthOfLongestSubStringWithoutDuplicates(s));
+    }
+
+    public int lengthOfLongestSubStringWithoutDuplicates(String s) {
         int left = 0;
         int right = 0;
         int maxLength = 0;

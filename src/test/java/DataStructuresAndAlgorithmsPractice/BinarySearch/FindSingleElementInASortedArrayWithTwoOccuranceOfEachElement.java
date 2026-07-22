@@ -1,7 +1,15 @@
 package DataStructuresAndAlgorithmsPractice.BinarySearch;
 
+import org.junit.Test;
+
 public class FindSingleElementInASortedArrayWithTwoOccuranceOfEachElement {
-    public static int findSingleElement(int[] nums) {
+
+    @Test
+    public void testFindSingleElement() {
+        int[] nums = {1,1,2,3,3,4,4,8,8};
+        System.out.println(findSingleElement(nums));
+    }
+    public int findSingleElement(int[] nums) {
         int last = nums.length - 1;
         if (nums.length == 1) return nums[0];
         if (nums[0] != nums[1]) return nums[0];

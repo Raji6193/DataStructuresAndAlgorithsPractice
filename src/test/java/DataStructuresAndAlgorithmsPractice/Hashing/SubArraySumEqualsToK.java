@@ -1,7 +1,17 @@
 package DataStructuresAndAlgorithmsPractice.Hashing;
 
+import org.junit.Test;
+
 public class SubArraySumEqualsToK {
-    public static int subArraySum(int[] nums, int k) {
+
+    @Test
+    public void testSubArraySumEqualsK() {
+        int[] nums = {1, -1, 0};
+        int k = 0;
+        System.out.println(subArraySum(nums, k));
+    }
+
+    public int subArraySum(int[] nums, int k) {
         int sum = nums[0];
         int count = 0;
 
